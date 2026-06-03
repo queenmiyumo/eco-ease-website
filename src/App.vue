@@ -14,6 +14,7 @@
         <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
         <router-link to="/products">Products</router-link>
+        <router-link to="/active-packaging">Learn More</router-link>
         <router-link to="/cart">Cart</router-link>
 
         <router-link to="/checkout" class="checkout-btn"> Checkout </router-link>

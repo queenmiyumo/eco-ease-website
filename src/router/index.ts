@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import ProductsView from '../views/ProductsView.vue'
 import CartView from '../views/CartView.vue'
 import CheckoutView from '../views/CheckoutView.vue'
+import ActivePackagingView from '../views/ActivePackagingView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/products',
       name: 'products',
       component: ProductsView,
+    },
+    {
+      path: '/active-packaging',
+      name: 'active-packaging',
+      component: ActivePackagingView,
     },
     {
       path: '/cart',

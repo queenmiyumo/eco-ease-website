@@ -98,6 +98,52 @@ const products = [
         <button @click="addToCart(product)">Add to Cart</button>
       </div>
     </section>
+
+    <!-- Page Directory -->
+    <section class="page-directory">
+      <div class="dir-inner">
+        <h2 class="dir-heading">Explore Eco Ease</h2>
+        <p class="dir-sub">Everything you need to make the switch to sustainable packaging.</p>
+        <div class="dir-grid">
+          <router-link to="/" class="dir-card">
+            <div class="dir-card-label">Home</div>
+            <h3>Welcome to Eco Ease</h3>
+            <p>
+              Learn what we do, who we serve and why Melbourne cafes are choosing smarter,
+              sustainable packaging solutions.
+            </p>
+            <span class="dir-link">Visit page</span>
+          </router-link>
+          <router-link to="/products" class="dir-card dir-card-active">
+            <div class="dir-card-label">Products</div>
+            <h3>You Are Here</h3>
+            <p>
+              Browse our full range of eco-friendly packaging products, including starter bundles
+              and custom branding options.
+            </p>
+            <span class="dir-link">Current page</span>
+          </router-link>
+          <router-link to="/about" class="dir-card">
+            <div class="dir-card-label">About</div>
+            <h3>Our Story and Mission</h3>
+            <p>
+              Meet the team behind Eco Ease and understand our commitment to reducing packaging
+              waste one cafe at a time.
+            </p>
+            <span class="dir-link">Meet the team</span>
+          </router-link>
+          <router-link to="/active-packaging" class="dir-card">
+            <div class="dir-card-label">Active Packaging</div>
+            <h3>Our Exclusive Technology</h3>
+            <p>
+              Our chitosan antimicrobial coating that extends food freshness by up to 40% with zero
+              synthetic chemicals.
+            </p>
+            <span class="dir-link">Learn more</span>
+          </router-link>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 <style scoped>
@@ -183,5 +229,83 @@ const products = [
 
 .product-card button:hover {
   background: #6f946d;
+}
+
+.page-directory {
+  background: white;
+  padding: 80px 90px;
+  border-top: 1px solid #e0eadb;
+  margin-top: 60px;
+}
+.dir-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.dir-heading {
+  font-size: 1.8rem;
+  color: #2f5e3a;
+  margin-bottom: 8px;
+}
+.dir-sub {
+  font-size: 0.95rem;
+  color: #6b7d68;
+  margin-bottom: 40px;
+}
+.dir-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.dir-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 24px;
+  border-radius: 14px;
+  border: 1px solid #dfe7d8;
+  text-decoration: none;
+  background: #f6f9f4;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+.dir-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-color: #7ea57a;
+}
+.dir-card-active {
+  background: #f0f7ee;
+  border-color: #b8d4b0;
+  opacity: 0.7;
+  pointer-events: none;
+}
+.dir-card-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7ea57a;
+}
+.dir-card h3 {
+  font-size: 1rem;
+  color: #2f5e3a;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.dir-card p {
+  font-size: 0.83rem;
+  color: #5a6b58;
+  line-height: 1.65;
+  flex: 1;
+}
+.dir-link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2f5e3a;
+}
+.dir-card:not(.dir-card-active):hover .dir-link::after {
+  content: ' →';
 }
 </style>
